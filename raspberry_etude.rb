@@ -22,7 +22,7 @@ end
 # amplitude, pan, and filter cutoff parameters.
 define :chooseperc do
   if one_in(6)
-    sample "~/samples/sine.wav",
+    sample "./samples/sine.wav",
       amp: 1.5,
       rate: choose([0.825, 1.075]),
       sustain: 0,
@@ -31,8 +31,8 @@ define :chooseperc do
     sleep 5
   else
     sample choose([
-        "~/samples/bubbles.wav",
-        "~/samples/lushpad.wav"
+        "./samples/bubbles.wav",
+        "./samples/lushpad.wav"
     ]),
       amp:     3,
       rate:    choose([1, 1.2, 1.5, 1.8, 2.25]),
@@ -52,7 +52,7 @@ end
 # at random.
 define :choosemelody do
   if one_in(2)
-    sample "~/samples/bell.wav",
+    sample "./samples/bell.wav",
       amp:     3,
       rate:    choose([1, 1.2, 1.5, 1.8, 2.25]),
       sustain: 0,
@@ -61,7 +61,7 @@ define :choosemelody do
       pan:     choose([-1, -0.5, 0, 0.5, 1])
     sleep choose([0, 0.5, 0.8, 1.2])
   else
-    sample "~/samples/square.wav",
+    sample "./samples/square.wav",
       amp:     3,
       rate:    choose([1, 1.2, 1.5, 1.8, 2.25]),
       sustain: 0,
